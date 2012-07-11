@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46F8B7B1-AE64-4A32-A053-5E58823D0F76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuartzHelper</RootNamespace>
+    <AssemblyName>QuartzHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C5">
+      <HintPath>..\packages\Quartz.2.0.1\lib\net40-client\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.2.0.0\lib\2.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.0.1\lib\net40-client\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlConfigEditor\Entities\CalendarTrigger.cs" />
+    <Compile Include="XmlConfigEditor\Entities\CronMisfireInstruction.cs" />
+    <Compile Include="XmlConfigEditor\Entities\CronTrigger.cs" />
+    <Compile Include="XmlConfigEditor\Entities\DateIntervalMisfireInstruction.cs" />
+    <Compile Include="XmlConfigEditor\Entities\Job.cs" />
+    <Compile Include="XmlConfigEditor\Entities\JobDataMap.cs" />
+    <Compile Include="XmlConfigEditor\Entities\JobDataMapEntry.cs" />
+    <Compile Include="XmlConfigEditor\Entities\JobSchedulingData.cs" />
+    <Compile Include="XmlConfigEditor\Entities\NameGroupData.cs" />
+    <Compile Include="XmlConfigEditor\Entities\PreProcessingCommands.cs" />
+    <Compile Include="XmlConfigEditor\Entities\ProcessingDirectives.cs" />
+    <Compile Include="XmlConfigEditor\Entities\RepeatIntervalUnit.cs" />
+    <Compile Include="XmlConfigEditor\Entities\Schedule.cs" />
+    <Compile Include="XmlConfigEditor\Entities\SimpleMisfireInstruction.cs" />
+    <Compile Include="XmlConfigEditor\Entities\SimpleTrigger.cs" />
+    <Compile Include="XmlConfigEditor\Entities\Trigger.cs" />
+    <Compile Include="XmlConfigEditor\Entities\TriggerTypeBase.cs" />
+    <Compile Include="XmlConfigEditor\frmEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XmlConfigEditor\frmEditor.designer.cs">
+      <DependentUpon>frmEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlConfigEditor\frmGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XmlConfigEditor\frmGroup.designer.cs">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlConfigEditor\frmJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XmlConfigEditor\frmJob.designer.cs">
+      <DependentUpon>frmJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlConfigEditor\frmKeyValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XmlConfigEditor\frmKeyValue.designer.cs">
+      <DependentUpon>frmKeyValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlConfigEditor\frmNameGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XmlConfigEditor\frmNameGroup.designer.cs">
+      <DependentUpon>frmNameGroup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="XmlConfigEditor\frmEditor.resx">
+      <DependentUpon>frmEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XmlConfigEditor\frmGroup.resx">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XmlConfigEditor\frmJob.resx">
+      <DependentUpon>frmJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XmlConfigEditor\frmKeyValue.resx">
+      <DependentUpon>frmKeyValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XmlConfigEditor\frmNameGroup.resx">
+      <DependentUpon>frmNameGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
