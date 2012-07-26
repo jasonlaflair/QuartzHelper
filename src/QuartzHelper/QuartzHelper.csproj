@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="C5">
       <HintPath>..\packages\Quartz.2.0.1\lib\net40-client\C5.dll</HintPath>
@@ -55,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CronTester\frmCronTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CronTester\frmCronTester.Designer.cs">
+      <DependentUpon>frmCronTester.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +119,10 @@
     <Compile Include="XmlConfigEditor\frmNameGroup.designer.cs">
       <DependentUpon>frmNameGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="XmlConfigEditor\Services\XmlConfigService.cs" />
+    <EmbeddedResource Include="CronTester\frmCronTester.resx">
+      <DependentUpon>frmCronTester.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +134,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="XmlConfigEditor\frmEditor.resx">
       <DependentUpon>frmEditor.cs</DependentUpon>
@@ -147,6 +161,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <None Include="Resources\close_icon.png" />
+    <None Include="Resources\test_icon.png" />
+    <None Include="Resources\xml_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
