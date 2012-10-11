@@ -36,20 +36,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmdNow = new System.Windows.Forms.Button();
-            this.cmdNextFire = new System.Windows.Forms.Button();
             this.cmdLoopNext = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lbFires = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmdClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCron
             // 
-            this.txtCron.Location = new System.Drawing.Point(20, 30);
-            this.txtCron.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCron.Location = new System.Drawing.Point(15, 24);
             this.txtCron.Name = "txtCron";
-            this.txtCron.Size = new System.Drawing.Size(215, 22);
+            this.txtCron.Size = new System.Drawing.Size(245, 20);
             this.txtCron.TabIndex = 0;
             this.txtCron.TextChanged += new System.EventHandler(this.txtCron_TextChanged);
             // 
@@ -57,10 +57,9 @@
             // 
             this.dtpDateTime.CustomFormat = "MM/dd/yyyy hh:mm:ss tt";
             this.dtpDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateTime.Location = new System.Drawing.Point(20, 86);
-            this.dtpDateTime.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDateTime.Location = new System.Drawing.Point(15, 70);
             this.dtpDateTime.Name = "dtpDateTime";
-            this.dtpDateTime.Size = new System.Drawing.Size(215, 22);
+            this.dtpDateTime.Size = new System.Drawing.Size(162, 20);
             this.dtpDateTime.TabIndex = 1;
             // 
             // errorProvider1
@@ -71,10 +70,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 66);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 17);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "\"Current Time\":";
             // 
@@ -82,53 +80,37 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 17);
+            this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Cron Expression:";
             // 
             // cmdNow
             // 
-            this.cmdNow.Location = new System.Drawing.Point(55, 130);
-            this.cmdNow.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdNow.Location = new System.Drawing.Point(183, 67);
             this.cmdNow.Name = "cmdNow";
-            this.cmdNow.Size = new System.Drawing.Size(87, 28);
+            this.cmdNow.Size = new System.Drawing.Size(77, 23);
             this.cmdNow.TabIndex = 2;
             this.cmdNow.TabStop = false;
             this.cmdNow.Text = "Now";
             this.cmdNow.UseVisualStyleBackColor = true;
             this.cmdNow.Click += new System.EventHandler(this.cmdNow_Click);
             // 
-            // cmdNextFire
-            // 
-            this.cmdNextFire.Enabled = false;
-            this.cmdNextFire.Location = new System.Drawing.Point(149, 130);
-            this.cmdNextFire.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdNextFire.Name = "cmdNextFire";
-            this.cmdNextFire.Size = new System.Drawing.Size(87, 28);
-            this.cmdNextFire.TabIndex = 2;
-            this.cmdNextFire.Text = "Next";
-            this.cmdNextFire.UseVisualStyleBackColor = true;
-            this.cmdNextFire.Click += new System.EventHandler(this.cmdNextFire_Click);
-            // 
             // cmdLoopNext
             // 
             this.cmdLoopNext.Enabled = false;
-            this.cmdLoopNext.Location = new System.Drawing.Point(149, 180);
-            this.cmdLoopNext.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdLoopNext.Location = new System.Drawing.Point(183, 114);
             this.cmdLoopNext.Name = "cmdLoopNext";
-            this.cmdLoopNext.Size = new System.Drawing.Size(87, 28);
-            this.cmdLoopNext.TabIndex = 4;
-            this.cmdLoopNext.Text = "Next (1)";
+            this.cmdLoopNext.Size = new System.Drawing.Size(77, 23);
+            this.cmdLoopNext.TabIndex = 3;
+            this.cmdLoopNext.Text = "Calculate";
             this.cmdLoopNext.UseVisualStyleBackColor = true;
             this.cmdLoopNext.Click += new System.EventHandler(this.cmdLoopNext_Click);
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(55, 183);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown1.Location = new System.Drawing.Point(15, 117);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -140,10 +122,10 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(87, 22);
-            this.numericUpDown1.TabIndex = 3;
+            this.numericUpDown1.Size = new System.Drawing.Size(162, 20);
+            this.numericUpDown1.TabIndex = 2;
             this.numericUpDown1.Value = new decimal(new int[] {
-            1,
+            10,
             0,
             0,
             0});
@@ -152,36 +134,53 @@
             // lbFires
             // 
             this.lbFires.FormattingEnabled = true;
-            this.lbFires.ItemHeight = 16;
-            this.lbFires.Location = new System.Drawing.Point(265, 11);
-            this.lbFires.Margin = new System.Windows.Forms.Padding(4);
+            this.lbFires.Location = new System.Drawing.Point(275, 9);
             this.lbFires.Name = "lbFires";
-            this.lbFires.Size = new System.Drawing.Size(204, 196);
+            this.lbFires.Size = new System.Drawing.Size(154, 173);
             this.lbFires.TabIndex = 6;
             this.lbFires.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Values:";
+            // 
+            // cmdClose
+            // 
+            this.cmdClose.Location = new System.Drawing.Point(183, 161);
+            this.cmdClose.Name = "cmdClose";
+            this.cmdClose.Size = new System.Drawing.Size(77, 23);
+            this.cmdClose.TabIndex = 4;
+            this.cmdClose.Text = "Close";
+            this.cmdClose.UseVisualStyleBackColor = true;
+            this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
+            // 
             // frmCronTester
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 220);
+            this.ClientSize = new System.Drawing.Size(442, 195);
+            this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.lbFires);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.cmdLoopNext);
-            this.Controls.Add(this.cmdNextFire);
             this.Controls.Add(this.cmdNow);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpDateTime);
             this.Controls.Add(this.txtCron);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCronTester";
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quartz.NET Cron Tester";
             this.Load += new System.EventHandler(this.frmCronTester_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -198,11 +197,12 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button cmdLoopNext;
-        private System.Windows.Forms.Button cmdNextFire;
         private System.Windows.Forms.Button cmdNow;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbFires;
+        private System.Windows.Forms.Button cmdClose;
+        private System.Windows.Forms.Label label2;
     }
 }
 

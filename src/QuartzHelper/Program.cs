@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using QuartzHelper.CronTester;
 
 namespace QuartzHelper
 {
@@ -13,7 +14,7 @@ namespace QuartzHelper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDashboard());
+            Application.Run(new frmCronTester());
         }
     }
 }

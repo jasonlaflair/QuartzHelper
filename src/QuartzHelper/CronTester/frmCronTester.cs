@@ -23,20 +23,18 @@ namespace QuartzHelper.CronTester
             if (CronExpression.IsValidExpression(txtCron.Text))
             {
                 errorProvider1.SetError(txtCron, string.Empty);
-                cmdNextFire.Enabled = true;
                 cmdLoopNext.Enabled = true;
             }
             else
             {
                 errorProvider1.SetError(txtCron, "Invalid Cron Expression");
-                cmdNextFire.Enabled = false;
                 cmdLoopNext.Enabled = false;
             }
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            cmdLoopNext.Text = string.Format("Next ({0:N0})", numericUpDown1.Value);
+            //cmdLoopNext.Text = string.Format("Next ({0:N0})", numericUpDown1.Value);
         }
 
         private void cmdNow_Click(object sender, EventArgs e)
@@ -47,12 +45,6 @@ namespace QuartzHelper.CronTester
         private void SetToNow()
         {
             dtpDateTime.Value = DateTime.Now;
-        }
-
-        private void cmdNextFire_Click(object sender, EventArgs e)
-        {
-            lbFires.Items.Clear();
-            UpdateNext(dtpDateTime.Value);
         }
 
         private void cmdLoopNext_Click(object sender, EventArgs e)
@@ -87,6 +79,11 @@ namespace QuartzHelper.CronTester
             }
          
             return null;
+        }
+
+        private void cmdClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
